@@ -11,6 +11,8 @@ function ShowAllBookings() {
         const response = await axios.get(
           `${process.env.REACT_APP_API_URL}/bookings`
         );
+        console.log("response", response);
+
         setBookings(response.data);
       } catch (error) {
         alert("Error fetching bookings.");
