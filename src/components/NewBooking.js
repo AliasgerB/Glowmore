@@ -33,14 +33,14 @@ function NewBooking() {
         description: "",
       });
     } catch (error) {
-      alert("Error adding booking.");
+      alert(error.response.data);
     }
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className='max-w-2xl mx-auto bg-primary text-textDark p-6 rounded shadow-md mt-24 mb-24'
+      className='max-w-2xl mx-auto bg-primary text-textDark p-6 rounded shadow-md mt-20 mb-20'
     >
       <h2 className='text-2xl font-bold mb-4'>New Booking</h2>
 
